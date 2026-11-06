@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JARVIS | Central de Comando</title>
+  <style>
+    body {
+      margin: 0;
+      background: #080f1c;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    main {
+      max-width: 600px;
+      margin: 70px auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #00cfff;
+      font-size: 48px;
+      letter-spacing: 5px;
+    }
+    .card {
+      background: #142235;
+      border: 1px solid #244661;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    button {
+      background: #00cfff;
+      color: #07111c;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>JARVIS</h1>
+    <p>Seu assistente pessoal inteligente</p>
+    <div class="card">
+      <h2>Central de Comando</h2>
+      <p id="mensagem">Sistemas prontos, senhor.</p>
+      <button onclick="iniciar()">
+        Iniciar JARVIS
+      </button>
+    </div>
+  </main>
+  <script>
+    function iniciar() {
+      document.getElementById("mensagem").textContent =
+        "Bem-vindo, comandante. Vamos construir algo extraordinário.";
+    }
+  </script>
+</body>
+</html>
