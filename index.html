@@ -57,6 +57,38 @@
       document.getElementById("mensagem").textContent =
         "Bem-vindo, comandante. Vamos construir algo extraordinário.";
     }
-  </script>
+ 
+<script>
+function iniciar() {
+  document.querySelector(".card").innerHTML = `
+    <h2>Chat do JARVIS</h2>
+    <p>Sistemas de comunicação iniciados, senhor.</p>
+    <div id="conversa" style="min-height:120px; text-align:left; margin:20px 0;"></div>
+    <input id="mensagemUsuario" type="text"
+      placeholder="Digite sua mensagem..."
+      style="padding:12px; max-width:85%; border-radius:8px; border:none;">
+    <button onclick="enviar()">Enviar</button>
+  `;
+}
+
+function enviar() {
+  const campo = document.getElementById("mensagemUsuario");
+  const mensagem = campo.value.trim();
+  if (!mensagem) return;
+
+  const conversa = document.getElementById("conversa");
+
+  const usuario = document.createElement("p");
+  usuario.textContent = "Você: " + mensagem;
+  conversa.appendChild(usuario);
+
+  const jarvis = document.createElement("p");
+  jarvis.textContent = "JARVIS: Mensagem recebida, senhor. Minha inteligência ainda está em desenvolvimento.";
+  conversa.appendChild(jarvis);
+
+  campo.value = "";
+}
+</script>
+
 </body>
 </html>
